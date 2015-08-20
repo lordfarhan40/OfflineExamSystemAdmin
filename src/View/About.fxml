@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0"
+      prefWidth="324.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="324.0">
+            <children>
+                <Label text="Offline Exam System Admin">
+                    <font>
+                        <Font name="System Bold Italic" size="22.0"/>
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="25.0" prefWidth="324.0">
+            <children>
+                <Label text="Version 1.0">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <HBox alignment="TOP_CENTER" prefHeight="94.0" prefWidth="324.0">
+            <children>
+                <Label ellipsisString="" prefHeight="75.0" prefWidth="312.0"
+                       text="This is the admin module of the system. Used to design&#10;and edit exams and evaluate the answer sheets."
+                       textAlignment="CENTER"/>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <VBox.margin>
+                <Insets top="20.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="88.0" prefHeight="33.0" prefWidth="324.0">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+        </HBox>
+        <HBox prefHeight="36.0" prefWidth="324.0">
+            <children>
+                <HBox prefHeight="36.0" prefWidth="181.0"/>
+                <HBox alignment="CENTER" prefHeight="36.0" prefWidth="218.0">
+                    <children>
+                        <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="198.0"
+                               text="Email: lordfarhan40@gmail.com"/>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

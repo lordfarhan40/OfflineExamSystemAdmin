@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.QuestionnaireSaveController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#showAbout" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="377.0" prefWidth="600.0">
+                    <children>
+                        <HBox prefHeight="46.0" prefWidth="600.0">
+                            <children>
+                                <Label prefHeight="39.0" prefWidth="600.0"
+                                       text="Almost Done! Just enter the required information to finally save the exam."/>
+                            </children>
+                            <padding>
+                                <Insets left="25.0" right="25.0"/>
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="600.0">
+                            <children>
+                                <Label text="Title of the Exam">
+                                    <HBox.margin>
+                                        <Insets top="6.0"/>
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="examTitle" prefHeight="25.0" prefWidth="335.0">
+                                    <HBox.margin>
+                                        <Insets left="10.0"/>
+                                    </HBox.margin>
+                                </TextField>
+                                <Label fx:id="titleWarning" opacity="0.0" text="Cannot be empty" textFill="RED">
+                                    <HBox.margin>
+                                        <Insets left="10.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="56.0" prefHeight="34.0" prefWidth="600.0">
+                            <children>
+                                <Label text="Time Allocated">
+                                    <HBox.margin>
+                                        <Insets top="6.0"/>
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="timeMinutes" layoutX="169.0" layoutY="20.0" prefHeight="25.0"
+                                           prefWidth="107.0" promptText="Minutes">
+                                    <HBox.margin>
+                                        <Insets left="15.0"/>
+                                    </HBox.margin>
+                                </TextField>
+                                <Label fx:id="timeInvalidWarning" opacity="0.0" text="Not a Valid Input!"
+                                       textFill="#f50000">
+                                    <HBox.margin>
+                                        <Insets left="15.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="101.0" prefHeight="34.0"
+                              prefWidth="600.0">
+                            <children>
+                                <CheckBox fx:id="checkBoxFile" mnemonicParsing="false" onAction="#checkBoxChangedFile"
+                                          selected="true" text="Set Instruction File"/>
+                                <Button fx:id="fileButton" mnemonicParsing="false" onAction="#chooseFile"
+                                        prefHeight="25.0" prefWidth="115.0" text="Choose .txt File">
+                                    <HBox.margin>
+                                        <Insets left="25.0"/>
+                                    </HBox.margin>
+                                </Button>
+                                <Label fx:id="fileWarning" contentDisplay="CENTER" opacity="0.0" prefHeight="25.0"
+                                       prefWidth="146.0" text="ONLY TEXT FILES" textFill="#eb0000">
+                                    <HBox.margin>
+                                        <Insets left="15.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="146.0" prefHeight="34.0"
+                              prefWidth="600.0">
+                            <padding>
+                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                            </padding>
+                            <children>
+                                <CheckBox fx:id="checkBoxPassword" mnemonicParsing="false"
+                                          onAction="#checkBoxChangedPassword" prefHeight="17.0" prefWidth="120.0"
+                                          selected="true" text="Require Password"/>
+                                <Label fx:id="passwordLabel" prefHeight="17.0" prefWidth="155.0"
+                                       text="Password (Min 8 characters)">
+                                    <HBox.margin>
+                                        <Insets left="20.0"/>
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="password"/>
+                                <Label fx:id="passwordWarning" opacity="0.0" prefHeight="17.0" prefWidth="88.0"
+                                       text="Check Input" textFill="RED">
+                                    <HBox.margin>
+                                        <Insets left="2.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="600.0">
+                            <children>
+                                <Button alignment="CENTER" mnemonicParsing="false" onAction="#previousStep"
+                                        text="Back"/>
+                                <Button alignment="CENTER" layoutX="290.0" layoutY="27.0" mnemonicParsing="false"
+                                        onAction="#saveExam" text="Save">
+                                    <HBox.margin>
+                                        <Insets left="15.0"/>
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="doneButton" disable="true" mnemonicParsing="false"
+                                        onAction="#doneSaveExam" text="Done">
+                                    <HBox.margin>
+                                        <Insets left="15.0"/>
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

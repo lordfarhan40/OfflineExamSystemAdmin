@@ -1,0 +1,33 @@
+.root {
+    -fx-background-color: #ecf0f1;
+}
+
+.vbox {
+    -fx-padding: 15;
+}
+
+.button {
+    -fx-background-radius: 0px;
+    -fx-font-size: 19px;
+    -fx-background-color: #95a5a6;
+    -fx-padding: 10px 20px 10px 20px;
+}
+
+.button:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+.menu-bar {
+    -fx-background-color: #ecf0f1;
+    -fx-min-width: 100%;
+}
+
+.menu:hover, .menu:showing, .menu-item:hover, .menu-item:focused {
+    -fx-background-color: grey;
+}
+
+.text-field, .text-area {
+    -fx-background-radius: 0px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: darkslategrey;
+}

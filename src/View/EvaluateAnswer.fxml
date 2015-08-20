@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.EvaluateAnswerController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="showAbout" mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="378.0" prefWidth="600.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="59.0" prefWidth="600.0">
+                            <children>
+                                <Label text="Select the Master Answer Key"/>
+                                <Button fx:id="selectMasterKey" mnemonicParsing="false" onAction="#selectMasterKey"
+                                        text="Select Master Key">
+                                    <VBox.margin>
+                                        <Insets top="5.0"/>
+                                    </VBox.margin>
+                                </Button>
+                                <Label fx:id="alertForMasterKey" opacity="0.0" text="No Master Key Selected"
+                                       textFill="RED">
+                                    <VBox.margin>
+                                        <Insets top="5.0"/>
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                            </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="72.0" prefWidth="600.0">
+                            <children>
+                                <Label text="Select the folder containing Answer Sheets"/>
+                                <Button fx:id="selectFolder" mnemonicParsing="false" onAction="#selectFolder"
+                                        text="Select the Folder">
+                                    <VBox.margin>
+                                        <Insets top="5.0"/>
+                                    </VBox.margin>
+                                </Button>
+                                <Label fx:id="answerKeyError" opacity="0.0" text="No AnswerSheets selected"
+                                       textFill="RED">
+                                    <VBox.margin>
+                                        <Insets top="5.0"/>
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                            </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="109.0" prefHeight="41.0" prefWidth="600.0">
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                            </padding>
+                            <children>
+                                <Label fx:id="alertForCorrectMarks" opacity="0.0"
+                                       text="Marks should be in Integer and above 0" textFill="RED"/>
+                                <Label fx:id="alertForNegativeMarks" layoutX="159.0" layoutY="25.0" opacity="0.0"
+                                       text="Negative marks should be Integer and should not be less than 0"/>
+                            </children>
+                        </VBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="58.0" prefWidth="249.0">
+                                    <children>
+                                        <Label text="Marks per Correct Answer"/>
+                                        <TextField fx:id="textBoxMarks" prefHeight="25.0" prefWidth="65.0" text="1">
+                                            <HBox.margin>
+                                                <Insets left="5.0"/>
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="58.0"
+                                      prefWidth="306.0">
+                                    <children>
+                                        <Label text="Marks to deduct per Wrong Answer">
+                                            <HBox.margin>
+                                                <Insets left="10.0"/>
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="negativeMarks" prefHeight="25.0" prefWidth="55.0" text="0">
+                                            <HBox.margin>
+                                                <Insets left="5.0"/>
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="75.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#goBack" text="Back"/>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                                    </padding>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="73.0" prefWidth="460.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#onClickEvaluation"
+                                                text="Save Result Excel Sheet"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
