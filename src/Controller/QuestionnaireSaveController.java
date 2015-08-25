@@ -96,7 +96,7 @@ public class QuestionnaireSaveController {
         try {
             //updateMainExam();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("../View/EditQuestion.fxml"));
+            loader.setLocation(getClass().getResource("EditQuestion.fxml"));
             Parent parent = loader.load();
             EditQuestionController controller = loader.getController();
             controller.initialiseSetup(mainExam, masterAnswerSheet);
@@ -283,7 +283,7 @@ public class QuestionnaireSaveController {
     @FXML
     public void doneSaveExam(Event event) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("../View/Welcome.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
             getStage((Node) event.getSource()).setScene(new Scene(parent));
         } catch (Exception exception) {
 

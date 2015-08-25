@@ -9,9 +9,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -33,7 +30,7 @@ public class WelcomeController {
         try {
             Stage stage = (Stage) newExam.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("../View/EditQuestion.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("EditQuestion.fxml"));
             Parent parent = fxmlLoader.load();
             stage.setScene(new Scene(parent));
         } catch (Exception e) {
@@ -74,7 +71,7 @@ public class WelcomeController {
     public void setInformationPage(Event e) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("../View/ExamInfo.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("ExamInfo.fxml"));
             Parent parent = fxmlLoader.load();
             ExamInfoController examInfoController = fxmlLoader.getController();
             examInfoController.init(mainExam, passwordProtected);
@@ -89,7 +86,7 @@ public class WelcomeController {
     @FXML
     public void evaluateExam(Event event) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("../View/EvaluateAnswer.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("EvaluateAnswer.fxml"));
             Stage stage = getStage((Node) event.getSource());
             stage.setScene(new Scene(parent));
         } catch (Exception exception) {

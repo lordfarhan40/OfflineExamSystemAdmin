@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 public class AboutUsLoader {
     public void showAboutUs() {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("../View/About.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("About.fxml"));
             Stage stage = new Stage();
             stage.setTitle("About this Software");
             stage.initModality(Modality.APPLICATION_MODAL);

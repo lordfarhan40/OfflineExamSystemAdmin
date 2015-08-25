@@ -45,7 +45,7 @@ public class ExamInfoController {
         try {
             Stage stage = getStage((Node) e.getSource());
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("../View/EditQuestion.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("EditQuestion.fxml"));
             Parent parent = fxmlLoader.load();
             EditQuestionController editQuestionController = fxmlLoader.getController();
             editQuestionController.initialiseSetup(mainExam, masterAnswerSheet);
@@ -59,7 +59,7 @@ public class ExamInfoController {
         try {
             Stage stage = getStage((Node) event.getSource());
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("../View/QuestionnaireSave.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("QuestionnaireSave.fxml"));
             Parent parent = fxmlLoader.load();
             QuestionnaireSaveController questionnaireSaveController = fxmlLoader.getController();
             questionnaireSaveController.setInitialize(mainExam, masterAnswerSheet);
@@ -72,7 +72,7 @@ public class ExamInfoController {
     public void onClickBack(Event event) {
         try {
             Stage stage = getStage((Node) event.getSource());
-            Parent parent = FXMLLoader.load(getClass().getResource("../View/Welcome.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
             stage.setScene(new Scene(parent));
         } catch (Exception e) {
             e.printStackTrace();

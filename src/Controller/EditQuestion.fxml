@@ -34,7 +34,8 @@
                         <Font size="18.0"/>
                     </font>
                 </Label>
-                <TextArea fx:id="question" prefHeight="136.0" prefWidth="570.0" promptText="Enter the question here">
+                <TextArea fx:id="question" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                          minWidth="-Infinity" prefHeight="82.0" prefWidth="550.0" promptText="Enter the question here">
                     <VBox.margin>
                         <Insets top="10.0"/>
                     </VBox.margin>
@@ -50,7 +51,8 @@
                                 <ToggleGroup fx:id="correctAnswer"/>
                             </toggleGroup>
                         </RadioButton>
-                        <TextField fx:id="textField1" prefHeight="27.0" prefWidth="569.0" promptText="Enter Option 1"
+                        <TextField fx:id="textField1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                   minWidth="-Infinity" prefHeight="27.0" prefWidth="550.0" promptText="Enter Option 1"
                                    style="-fx-border-color: #5FB404; -fx-background-color: #D0F5A9;" styleClass="option"
                                    text="adsad"/>
                     </children>
@@ -62,7 +64,8 @@
                     <children>
                         <RadioButton fx:id="radioButton2" mnemonicParsing="false" onAction="#radioButtonClicked"
                                      toggleGroup="$correctAnswer"/>
-                        <TextField fx:id="textField2" prefHeight="27.0" prefWidth="553.0" promptText="Enter Option 2"
+                        <TextField fx:id="textField2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                   minWidth="-Infinity" prefHeight="27.0" prefWidth="550.0" promptText="Enter Option 2"
                                    styleClass="option"/>
                     </children>
                     <opaqueInsets>
@@ -76,7 +79,8 @@
                     <children>
                         <RadioButton fx:id="radioButton3" mnemonicParsing="false" onAction="#radioButtonClicked"
                                      toggleGroup="$correctAnswer"/>
-                        <TextField fx:id="textField3" prefHeight="27.0" prefWidth="553.0" promptText="Enter Option 3"
+                        <TextField fx:id="textField3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                   minWidth="-Infinity" prefHeight="27.0" prefWidth="550.0" promptText="Enter Option 3"
                                    styleClass="option"/>
                     </children>
                     <opaqueInsets>
@@ -90,7 +94,8 @@
                     <children>
                         <RadioButton fx:id="radioButton4" mnemonicParsing="false" onAction="#radioButtonClicked"
                                      toggleGroup="$correctAnswer"/>
-                        <TextField fx:id="textField4" prefHeight="27.0" prefWidth="586.0" promptText="Enter Option 4"
+                        <TextField fx:id="textField4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                   minWidth="-Infinity" prefHeight="27.0" prefWidth="550.0" promptText="Enter Option 4"
                                    styleClass="option"/>
                     </children>
                     <opaqueInsets>

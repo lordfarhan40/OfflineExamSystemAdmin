@@ -80,7 +80,7 @@ public class EditQuestionController {
         if (counter == 0) {
             try {
                 Stage stage = getStage();
-                Parent parent = FXMLLoader.load(getClass().getResource("../View/Welcome.fxml"));
+                Parent parent = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
                 stage.setScene(new Scene(parent));
             } catch (Exception e) {
                 System.out.print("Error while calling Welcome");
@@ -129,7 +129,7 @@ public class EditQuestionController {
         }
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("../View/QuestionnaireSave.fxml"));
+            loader.setLocation(getClass().getResource("QuestionnaireSave.fxml"));
             Parent parent = loader.load();
             QuestionnaireSaveController questionnaireSaveController = loader.getController();
             questionnaireSaveController.setInitialize(questionBank, masterAnswerSheet);

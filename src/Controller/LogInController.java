@@ -2,11 +2,9 @@ package Controller;
 
 import Helper.EncryptDecrypter;
 import Helper.FileWorker;
-import javafx.application.Platform;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -116,7 +114,7 @@ public class LogInController {
 
     private void loadWelcomeScreen() {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("../View/Welcome.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
             getStage().setScene(new Scene(parent));
         } catch (Exception exception) {
             exception.printStackTrace();

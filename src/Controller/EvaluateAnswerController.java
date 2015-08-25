@@ -72,7 +72,7 @@ public class EvaluateAnswerController {
     @FXML
     private void goBack(Event event) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("../View/Welcome.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
             getStage().setScene(new Scene(parent));
         } catch (Exception exception) {
 
